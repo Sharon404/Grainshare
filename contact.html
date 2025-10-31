@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Grainshare</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.jpeg" alt="Grainshare Logo">
+                    <span class="logo-text">Grainshare</span>
+                </a>
+                <div class="site-nav">
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html" class="active cta">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="inner">
+                <h1>Contact Us</h1>
+                <p class="lead">Get in touch with our team</p>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="inner two-col">
+                <div>
+                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                        <label for="name">Full name</label>
+                        <input id="name" name="name" type="text" required>
+
+                        <label for="email">Email address</label>
+                        <input id="email" name="email" type="email" required>
+
+                        <label for="phone">Phone (optional)</label>
+                        <input id="phone" name="phone" type="tel">
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+
+                        <!-- Anti-spam honeypot field -->
+                        <input type="text" name="_gotcha" style="display:none">
+
+                        <!-- Redirect after submission -->
+                        <input type="hidden" name="_next" value="/thanks.html">
+
+                        <button type="submit" class="btn" id="submitBtn">
+                            <span class="btn-text">Send message</span>
+                            <span class="btn-loader" style="display: none;">Sending...</span>
+                        </button>
+                        <p id="formMsg" class="muted" aria-live="polite"></p>
+                    </form>
+</div>
+
+
+<aside>
+<h2>Our office</h2>
+<p>Grainshare Limited<br>Nairobi, Kenya</p>
+<p>Phone: 0798037574<br>Email: info@grainshare.co.ke</p>
+
+
+<h3>Follow us</h3>
+<p class="muted">(Add social links here)</p>
+</aside>
+</div>
+</section>
+</main>
+
+
+<footer class="site-footer">
+<div class="inner">
+<div class="left">
+<img src="assets/images/logo-footer.png" alt="Grainshare" class="logo-sm">
+<p class="muted">&copy; 2025 Grainshare Limited</p>
+</div>
+<div class="right">
+<p class="muted">Address: Nairobi, Kenya</p>
+<p class="muted">Phone: 0798037574 &nbsp;|&nbsp; Email: info@grainshare.co.ke</p>
+</div>
+</div>
+</footer>
+
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
