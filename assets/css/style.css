@@ -66,20 +66,23 @@ nav {
 .logo {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     text-decoration: none;
+    padding: 0.5rem 0;
 }
 
 .logo img {
-    height: 55px;
+    height: 80px;
     transition: var(--transition);
+    max-width: none;
 }
 
 .logo-text {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--dark-green);
     transition: var(--transition);
+    white-space: nowrap;
 }
 
 .logo:hover img {
@@ -151,15 +154,24 @@ nav {
 }
 
 /* Hero section */
-/* Hero Section */
 .hero {
-    padding: 6rem 0;
+    padding: 8rem 0;
     text-align: center;
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
-                url('../images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
+    background: url('../images/hero-bg.jpg') center/cover no-repeat;
     position: relative;
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75));
+    z-index: 1;
 }
 
 .hero::after {
@@ -170,22 +182,29 @@ nav {
     right: 0;
     height: 100px;
     background: linear-gradient(to bottom, transparent, var(--light-bg));
+    z-index: 2;
+}
+
+.hero .inner {
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {
     font-size: 3.5rem;
-    color: var(--dark-green);
+    color: #fff;
     margin-bottom: 1.5rem;
     font-weight: 700;
     line-height: 1.1;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .lead {
-    color: var(--muted);
+    color: rgba(255, 255, 255, 0.9);
     max-width: 780px;
-    margin: 0 auto;
+    margin: 0 auto 2rem;
     font-size: 1.25rem;
-    margin-bottom: 2rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 .actions {
@@ -215,8 +234,13 @@ nav {
 
 .btn.ghost {
     background: transparent;
-    border: 2px solid var(--dark-green);
-    color: var(--dark-green);
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn.ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
 }
 
 
@@ -554,8 +578,13 @@ aside h3 {
 }
 
 .logo-sm {
-    height: 45px;
-    margin-bottom: 1rem;
+    height: 65px;
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.logo-sm:hover {
+    transform: scale(1.05);
 }
 
 .muted {
@@ -658,9 +687,40 @@ aside h3 {
     .site-footer .right {
         text-align: center;
     }
-    
+
     .inner {
         padding: 0 1.5rem;
+    }
+
+    .logo-sm {
+        height: 55px;
+        margin-bottom: 1rem;
+    }
+    
+    @media (max-width: 480px) {
+        .logo-sm {
+            height: 45px;
+        }
+    }    .logo img {
+        height: 60px;
+    }
+
+    .logo-text {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 50px;
+    }
+
+    .logo-text {
+        font-size: 1.25rem;
     }
 }
 
