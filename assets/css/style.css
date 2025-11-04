@@ -192,7 +192,7 @@ nav {
 
 .hero h1 {
     font-size: 3.5rem;
-    color: #fff;
+    color: #e3f166;
     margin-bottom: 1.5rem;
     font-weight: 700;
     line-height: 1.1;
@@ -309,7 +309,8 @@ nav {
 
 /* Page Header */
 .page-header {
-    background: var(--light-green);
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), 
+                         url('../images/about-bg.jpg') center/cover no-repeat;
     padding: 4rem 0;
     text-align: center;
     position: relative;
@@ -331,6 +332,7 @@ nav {
     color: var(--dark-green);
     margin-bottom: 1rem;
 }
+
 
 /* Content */
 .content {
