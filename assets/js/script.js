@@ -2,13 +2,26 @@ javascript
 // Minimal script: nav toggle + simple form validation
 (function(){
 function qs(id){return document.getElementById(id)}
-// nav toggle
-var toggle = document.getElementById('navToggle') || document.getElementById('navToggle2') || document.getElementById('navToggle3') || document.getElementById('navToggle4')
-toggle && toggle.addEventListener('click', function(){
-var nav = document.getElementById('siteNav') || document.getElementById('siteNav2') || document.getElementById('siteNav3') || document.getElementById('siteNav4')
-if(!nav) return
-nav.style.display = nav.style.display === 'block' ? '' : 'block'
-})
+
+// nav toggle with class toggling
+var toggle = qs('navToggle');
+var siteNav = qs('siteNav');
+
+if(toggle && siteNav){
+    toggle.addEventListener('click', function(){
+        toggle.classList.toggle('active');
+        siteNav.classList.toggle('active');
+    });
+    
+    // Close menu when a link is clicked
+    var navLinks = siteNav.querySelectorAll('a');
+    navLinks.forEach(function(link){
+        link.addEventListener('click', function(){
+            toggle.classList.remove('active');
+            siteNav.classList.remove('active');
+        });
+    });
+}
 
 
 // contact form

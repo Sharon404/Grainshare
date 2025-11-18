@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Grainshare</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="assets/images/Grainshare.png" alt="Grainshare Logo">
+                    <span class="logo-text">Grainshare</span>
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <div class="site-nav" id="siteNav">
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About</a>
+                    <a href="blog.html" class="active">Blog</a>
+                    <a href="contact.html" class="cta">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="inner">
+                <h1>Blog</h1>
+                <p class="lead">Stories and updates from our work with small-scale farmers, farm visits, and community impact.</p>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="inner">
+                <!-- Blog Post 1 -->
+                <article class="blog-post">
+                    <h2>Meeting with Small-Scale Farmers in Siaya County</h2>
+                    <p class="blog-meta">Published on <time datetime="2025-11-18">November 18, 2025</time></p>
+                    
+                    <div class="blog-slideshow">
+                        <div class="slideshow-container">
+                            <div class="slide fade">
+                                <img src="assets/images/farmer-meeting-1.jpg" alt="Farmers gathering">
+                            </div>
+                            <div class="slide fade">
+                                <img src="assets/images/farmer-meeting-2.jpg" alt="Discussion session">
+                            </div>
+                            <div class="slide fade">
+                                <img src="assets/images/farmer-meeting-3.jpg" alt="Community engagement">
+                            </div>
+                            
+                            <button class="prev" onclick="changeSlide(-1)">❮</button>
+                            <button class="next" onclick="changeSlide(1)">❯</button>
+                            
+                            <div class="slide-dots">
+                                <span class="dot" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(2)"></span>
+                                <span class="dot" onclick="currentSlide(3)"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p>
+                        We recently had the privilege of meeting with small-scale farmers across Siaya County to understand their challenges 
+                        and gather feedback on our services. The conversations were inspiring and reinforced our commitment to supporting 
+                        small-scale farmers in their journey toward fair markets and sustainable growth.
+                    </p>
+                    <p>
+                        Farmers shared their experiences with traditional supply chains, the uncertainties they face, and their hopes for 
+                        a more transparent and equitable system. These insights directly inform our product development and service 
+                        improvements.
+                    </p>
+                </article>
+
+                <!-- Blog Post 2 (Template) -->
+                <article class="blog-post">
+                    <h2>Farm Visit: A Day in the Field</h2>
+                    <p class="blog-meta">Published on <time datetime="2025-11-10">November 10, 2025</time></p>
+                    
+                    <div class="blog-slideshow">
+                        <div class="slideshow-container">
+                            <div class="slide fade">
+                                <img src="assets/images/farm-visit-1.jpg" alt="Farm landscape">
+                            </div>
+                            <div class="slide fade">
+                                <img src="assets/images/farm-visit-2.jpg" alt="Crops in field">
+                            </div>
+                            
+                            <button class="prev" onclick="changeSlide(-1)">❮</button>
+                            <button class="next" onclick="changeSlide(1)">❯</button>
+                            
+                            <div class="slide-dots">
+                                <span class="dot" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(2)"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p>
+                        Our team visited farms across the region to assess post-harvest practices and understand the logistical challenges 
+                        that small-scale farmers face. We observed firsthand how proper handling and storage can significantly impact crop 
+                        quality and market value.
+                    </p>
+                    <p>
+                        These insights are helping us develop better training programs and aggregation strategies to reduce post-harvest 
+                        losses and ensure small-scale farmers get fair prices for their produce.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Partner Logos Section -->
+    <section class="partners-section">
+        <div class="inner">
+            <h2>Our Partners</h2>
+            <div class="partners-grid">
+                <div class="partner-logo">
+                    <img src="assets/images/CGA-logo.png" alt="CGA Partner Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/EABL-Logo.png" alt="EABL Partner Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/Siaya-logo.png" alt="Siaya County Partner Logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="inner">
+            <div class="left">
+                <img src="assets/images/Grainshare-footer.png" alt="Grainshare" class="logo-sm">
+                <p class="muted">&copy; 2025 Grainshare Limited</p>
+            </div>
+            <div class="right">
+                <p class="muted">Address: Nairobi, Kenya</p>
+                <p class="muted">Phone: 0798037574 &nbsp;|&nbsp; Email: info@grainshare.co.ke</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/blog.js"></script>
+</body>
+</html>
