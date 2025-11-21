@@ -1,4 +1,3 @@
-javascript
 // Minimal script: nav toggle + simple form validation
 (function(){
 function qs(id){return document.getElementById(id)}
